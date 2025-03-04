@@ -1,0 +1,59 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and root container fill the viewport */
+html, body, #root {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+}
+#root{
+  max-width: none;
+  padding: 0px;
+}
+/* Main wrapper */
+.wholeContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures full viewport height */
+  background-color: #e9e9e9; /* Dark background like second app */
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Main content should expand and push the footer down */
+.mainContent {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Ensures proper stacking */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header and Footer should be properly spaced */
+header, footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  /* background-color: #20232a; */
+}
+footer{
+  background-color: #ce0ac7;
+
+}
+
+/* Debugging styles removed */
+
+
+/* Debugging: Background colors for better visibility */
+

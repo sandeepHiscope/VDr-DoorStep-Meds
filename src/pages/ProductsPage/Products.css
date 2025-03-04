@@ -1,0 +1,41 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body{
+  width: 100vw;
+  overflow-x: scroll;
+  background: #eeeeee;
+  scroll-behavior: smooth;
+}
+
+.productsPage{
+  display: flex;
+  justify-content:space-around;
+  position: relative;
+}
+.productsFilter{
+  /* margin: .1rem ;  */
+  position: sticky;
+  top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+.productsContainer{
+  background: #333333c2;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  gap: 1.5rem;
+  /* border-radius: .5rem; */
+
+  /* width: 92%; */
+  position: relative;
+  /* left: 0.2%; */
+
+}

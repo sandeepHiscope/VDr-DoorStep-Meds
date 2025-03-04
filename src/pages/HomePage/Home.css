@@ -1,0 +1,38 @@
+.homeContent {
+  background: #b2b1b1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.heroSection {
+  background: #2fb243;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.heroSection img {
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+.heroSection h1 {
+  color: black;
+  position: absolute;
+}
+.heroSection p {
+  color: black;
+  position: absolute;
+}
+.scrollingContainer {
+  background: #d723ef;
+  height: 20rem;
+}
+.midContent {
+  background: #1ea9ff;
+  height: 30rem;
+}
+.endContent {
+  background: #ffa91e;
+  height: 10rem;
+}
