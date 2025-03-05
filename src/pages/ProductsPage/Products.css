@@ -25,6 +25,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
-  gap: 2.5rem;
+  gap: 2rem;
   /* background: #f78282; */
 }
