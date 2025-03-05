@@ -31,8 +31,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: baseline;
-    gap: 2.5em;
-    position: relative;
-    /* left: 0.2%; */
+    padding: 1em;
+  column-gap:.9em ;
+  row-gap: 1em;
   
   }

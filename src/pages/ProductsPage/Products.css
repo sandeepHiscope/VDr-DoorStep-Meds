@@ -24,7 +24,8 @@ html {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
-  gap: .4rem;
+  padding: 1em;
+  column-gap:.9em ;
+  row-gap: 1em;
   /* background: #f78282; */
 }
