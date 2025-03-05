@@ -150,11 +150,11 @@ export default function Products() {
   return (
     <>
       <main>
-        <div className="productsPage">
-          <div className="productsFilter">
+        <div className="productsPageProductsPage">
+          <div className="productsPageProductsFilter">
           <ProductFilters/>
           </div>
-          <div className="productsContainer">
+          <div className="productsPageProductsContainer">
             {products.map((product) => (
               <Card
                 key={product.id}

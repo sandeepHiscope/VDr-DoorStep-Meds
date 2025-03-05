@@ -150,11 +150,11 @@ export default function HealtProducts() {
   return (
     <>
       <main>
-        <div className="productsPage">
-          <div className="productsFilter">
+        <div className="healtProductsProductsPage">
+          <div className="healtProductsProductsFilter">
           <ProductFilters/>
           </div>
-          <div className="productsContainer">
+          <div className="healtProductsProductsContainer">
             {products.map((product) => (
               <Card
                 key={product.id}

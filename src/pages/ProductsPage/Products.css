@@ -1,41 +1,30 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-body{
-  width: 100vw;
-  overflow-x: scroll;
-  background: #eeeeee;
-  scroll-behavior: smooth;
+body,
+html {
+  height: 100%;
+  overflow-x: hidden; /* Prevent unwanted horizontal scroll */
 }
 
-.productsPage{
+.productsPageProductsPage {
   display: flex;
-  justify-content:space-around;
-  position: relative;
+  align-items: flex-start; /* Align filter to the top */
+  justify-content: space-between;
+  height: auto; /* Expand based on content */
 }
-.productsFilter{
-  /* margin: .1rem ;  */
+
+.productsPageProductsFilter {
+  width: 300px; /* Fixed width */
+  height: auto; /* Full height */
   position: sticky;
-  top: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
+  top: 0; /* Stick to top */
+  /* background: #0941bb; */
+  align-self: flex-start; /* Prevents stretching */
 }
-.productsContainer{
-  background: #da0b0bd6;
-  padding: 2rem;
+
+.productsPageProductsContainer {
+  flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: baseline;
-  gap: 1.5rem;
-  /* border-radius: .5rem; */
-
-  /* width: 92%; */
-  position: relative;
-  /* left: 0.2%; */
-
+  padding: 2rem;
+  gap: 2.5rem;
+  /* background: #f78282; */
 }

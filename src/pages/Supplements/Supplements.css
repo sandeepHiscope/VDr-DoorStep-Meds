@@ -11,12 +11,12 @@
     scroll-behavior: smooth;
   }
   
-  .productsPage{
+  .SupplementsPproductsPage{
     display: flex;
     justify-content:space-around;
     position: relative;
   }
-  .productsFilter{
+  .SupplementsPproductsFilter{
     /* margin: .1rem ;  */
     position: sticky;
     top: 20px;
@@ -25,8 +25,8 @@
     flex-direction: column;
     justify-content: baseline;
   }
-  .productsContainer{
-    background: #333333c2;
+  .SupplementsPproductsContainer{
+    background: #e8e8e8bc;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;

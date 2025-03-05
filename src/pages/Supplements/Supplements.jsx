@@ -150,8 +150,8 @@ export default function Supplements() {
   return (
     <>
       <main>
-        <div className="productsPage">
-          <div className="productsFilter">
+        <div className="SupplementsPproductsPage">
+          <div className="SupplementsPproductsFilter">
           <ProductFilters/>
           </div>
           {/* <div className="productsContainer">
