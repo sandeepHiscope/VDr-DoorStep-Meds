@@ -7,14 +7,21 @@ import hero from "../../assets/hero.jpg";
 export default function Home() {
   return (
     <div className="homeContent">
-      <di className="heroSection">
+      {/* <hr /> */}
+      <div className="heroSection">
         <img src={hero} alt="Banner" />
-        <h1>we provide world's most truseted medicines </h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum aliquam tempore corporis reiciendis voluptatum in repudiandae? Maiores dolor odit soluta eius, quia, excepturi fugit quis facilis placeat, omnis qui.</p>
-      </di>
+        <h1>Your Health, Our Priority </h1>
+        <h2>Trusted Medicines Delivered to Your Doorstep</h2>
+        <p>Shop with confidence knowing that our medicines are sourced from trusted manufacturers and delivered with care.</p>
+        
+      </div>
+      <hr />
       <div className="scrollingContainer">Scrolling Content</div>
+      <hr />
       <div className="midContent">Mid content</div>
+      <hr />
       <div className="endContent">End content</div>
+      <hr />
     </div>
   );
 }

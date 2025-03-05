@@ -1,0 +1,15 @@
+.scrollingCardsContainer{
+    height: 18rem;
+    width: 100%;
+    background: #e6ff5a;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.innerScrollingCardsContainer{
+    height: 15rem;
+    width: 95%;
+    background: #7e5aff;
+}
