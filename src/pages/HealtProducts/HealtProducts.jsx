@@ -1,7 +1,7 @@
 import "./HealtProducts.css";
 import Card from "../../components/Card/Card";
 import ProductFilters from "../../components/ProductFilters/ProductFilters";
-import img from "../../assets/y.jpg";
+import img from "../../assets/capsules.jpg";
 
 const products = [
   {

@@ -10,9 +10,9 @@ export default function Home() {
       {/* <hr /> */}
       <div className="heroSection">
         <img src={hero} alt="Banner" />
-        <h1>Your Health, Our Priority </h1>
-        <h2>Trusted Medicines Delivered to Your Doorstep</h2>
-        <p>Shop with confidence knowing that our medicines are sourced from trusted manufacturers and delivered with care.</p>
+        <h1>Your Health Is Our Priority </h1>
+        <h2>Trusted Medicines Delivere to Your Doorstep</h2>
+        {/* <p>Shop with confidence knowing that our medicines are sourced from trusted manufacturers and delivered with care.</p> */}
         
       </div>
       <hr />

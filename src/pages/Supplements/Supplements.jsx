@@ -1,7 +1,7 @@
 import "./Supplements.css";
 import Card from "../../components/Card/Card";
 import ProductFilters from "../../components/ProductFilters/ProductFilters";
-import img from "../../assets/x.jpg";
+import img from "../../assets/tablets.jpg";
 
 const products = [
   {
@@ -150,11 +150,11 @@ export default function Supplements() {
   return (
     <>
       <main>
-        <div className="SupplementsPproductsPage">
-          <div className="SupplementsPproductsFilter">
+        <div className="SupplementsProductsPage">
+          <div className="SupplementsProductsFilter">
           <ProductFilters/>
           </div>
-          {/* <div className="productsContainer">
+          <div className="SupplementsProductsContainer">
             {products.map((product) => (
               <Card
                 key={product.id}
@@ -164,8 +164,8 @@ export default function Supplements() {
                 price={product.price}
               />
             ))}
-          </div> */}
-          <h1>Supplements</h1>
+          </div>
+          {/* <h1>Supplements</h1> */}
         </div>
       </main>
     </>
