@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import Card from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
+import ScrollingCardsContainer from "../../components/ScrollingCardsContainer/ScrollingCardsContainer";
 import "./Home.css";
 import hero from "../../assets/hero.jpg";
 
@@ -15,13 +16,12 @@ export default function Home() {
         {/* <p>Shop with confidence knowing that our medicines are sourced from trusted manufacturers and delivered with care.</p> */}
         
       </div>
-      <hr />
-      <div className="scrollingContainer">Scrolling Content</div>
-      <hr />
+      <div className="scrollingContainer">
+      <ScrollingCardsContainer/>
+
+      </div>
       <div className="midContent">Mid content</div>
-      <hr />
-      <div className="endContent">End content</div>
-      <hr />
+   
     </div>
   );
 }
