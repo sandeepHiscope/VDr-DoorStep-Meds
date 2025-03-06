@@ -80,8 +80,10 @@
 
 .scroll-btn.left {
   left: 10px;
+  z-index: 1;
 }
 
 .scroll-btn.right {
   right: 10px;
+  z-index: 1;
 }

@@ -1,0 +1,106 @@
+.VerticalScrollingCardsContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 35rem; /* Adjust based on design */
+  /* max-height: 90vh; */
+  margin: auto;
+  background: #f0f0f0;
+  padding: 10px;
+  /* border-radius: 10px; */
+}
+
+.Verticalcards-container-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 50%;
+  height: 100%;
+  padding: 10px 0;
+  /* background: #60dcd2; */
+}
+
+.Verticalcards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.Verticalscrollingcard {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  margin: .5em;
+  padding: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  height: 13em;
+  width: 90%;
+  max-width: 650px;
+
+  position: relative;
+}
+
+.Verticalscrollingcard:hover {
+  transform: scale(1.05);
+}
+
+.Verticalproduct-image {
+  width: 18em;
+  height: 10em;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.Verticalcard-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Verticalcard-content h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.Verticalcard-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.Verticalscroll-btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10%;
+  transition: background 0.3s;
+  left: 47%;
+
+}
+
+.Verticalscroll-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.Verticalscroll-btn.up {
+  rotate: 270deg;
+  top: 5px;
+}
+
+.Verticalscroll-btn.down {
+  bottom: 5px;
+  rotate: 90deg;
+}

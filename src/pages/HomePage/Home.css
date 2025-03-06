@@ -1,12 +1,15 @@
 .homeContent {
   background: #ffffff;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
 }
 
-.heroSection {
+.homeheroSection {
   background: #2fb243;
   height: 17rem;
   display: flex;
@@ -16,7 +19,7 @@
   position: relative;
   text-align: center;
 }
-.heroSection img {
+.homeheroSection img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -29,31 +32,40 @@
 }
 
 
-.heroSection h1,
-.heroSection h2,
-.heroSection p {
+.homeheroSection h1,
+.homeheroSection h2,
+.homeheroSection p {
   color: rgb(255, 255, 255);
   position: relative; /* Ensure text is above the image */
   z-index: 1;
 }
-.heroSection h1{
+.homeheroSection h1{
   font-size: 4em
 }
-.heroSection h2{
+.homeheroSection h2{
   font-size: 1.8em
 }
-.heroSection h1{
+.homeheroSection h1{
   font-size: 4em
 }
-.scrollingContainer {
+.homescrollingContainer {
   /* background: #d723ef; */
   height: 20rem;
 }
-.midContent {
-  background: linear-gradient(to left, 45deg, #ffffff, #2fa9b2);
-  height: 35rem;
+.homemidContent {
+  height: auto;
+  background: #af7070;
 }
-.endContent {
+.homeendContent {
   /* background: #ffa91e; */
   height: 10rem;
+}
+
+.homeabout-us{
+  height: 34rem;
+  background: linear-gradient(55deg, #ff6af3, #5ec1ff);
+  /* background: #529e0f; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
