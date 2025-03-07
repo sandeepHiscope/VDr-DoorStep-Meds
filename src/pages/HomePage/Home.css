@@ -63,8 +63,7 @@
 
 .homeabout-us{
   height: 34rem;
-  background: linear-gradient(55deg, #ff6af3, #5ec1ff);
-  /* background: #529e0f; */
+  background: rgb(191, 220, 213);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
