@@ -20,7 +20,7 @@ export default function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/healtProducts" element={<HealtProducts />} />
             <Route path="/supplements" element={<Supplements />} />
-            <Route path="/cart" element={<CartPage />} /> {/* Ensure CartPage is correct */}
+            <Route path="/cart" element={<CartPage />} />
           </Routes>
         </main>
         <Footer />

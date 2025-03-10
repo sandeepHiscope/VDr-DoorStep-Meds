@@ -1,22 +1,35 @@
 import { createContext, useState } from "react";
 
-// Create Context
 export const CartContext = createContext();
 
-// Provide Context
-export  function CartProvider({ children }) {
+export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
-  function addToCart(product) {
-    setCartItems([...cartItems, product]); // Adds new product to the cart
+  function addToCart(item) {
+    console.log("Clicked Add to Cart for:", item);
+
+    setCartItems((prevCart) => {
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
+      if (existingItem) {
+        return prevCart.map((cartItem) =>
+          cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+        );
+      } else {
+        return [...prevCart, { ...item, quantity: 1 }];
+      }
+    });
   }
 
-  function removeFromCart(productId) {
-    setCartItems(cartItems.filter((item) => item.id !== productId)); // Removes a product from cart
+  function removeFromCart(id) {
+    setCartItems((prevCart) =>
+      prevCart
+        .map((cartItem) => (cartItem.id === id ? { ...cartItem, quantity: cartItem.quantity - 1 } : cartItem))
+        .filter((cartItem) => cartItem.quantity > 0)
+    );
   }
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, setCartItems }}>
       {children}
     </CartContext.Provider>
   );
