@@ -1,31 +1,60 @@
-import React from "react";
-import "./Header.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
-  return (
-    <div className="header">
-      <Link to="/" className="logo">
-        V-Commerce
-      </Link>
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-      <nav className="navBar">
-        <Link to="/products" className="navlink">
-          Products
+  return (
+    <header className="header">
+      <div className="logo-container">
+        <Link to="/" className="logo">
+          V-Commerce
         </Link>
-        <Link to="/healtProducts" className="navlink">
-        HealtProducts
+      </div>
+
+      <nav className="nav-bar">
+        <Link to="https://verifieddoctor.netlify.app/" className="nav-link">
+          VDr
         </Link>
-        <Link to="/supplements" className="navlink">
-        Supplements
+
+        {/* Dropdown */}
+        <div className="dropdown">
+          <button
+            className="dropbtn"
+            onClick={() => setDropdownOpen(!isDropdownOpen)}
+            onMouseOver={() => setDropdownOpen(!isDropdownOpen)}
+            onMouseLeave={() => setDropdownOpen(isDropdownOpen)}
+            >
+            Products ▾
+          </button>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <Link to="/products">Doctor's Prescribed</Link>
+              <Link to="/health-products">Cold, Fever & Pain Relief</Link>
+              <Link to="/supplements">Diabetes & Hypertension</Link>
+              <Link to="/supplements">Vitamins & Supplements</Link>
+              <Link to="/supplements">Medical Devices</Link>
+            </div>
+          )}
+        </div>
+
+        <Link to="/deals" className="nav-link">
+          Deals
         </Link>
-        <Link to="/products" className="navlink">
-          Products
+        <Link to="https://verifieddoctor.netlify.app/founderPage" className="nav-link">
+          About
         </Link>
-        <Link to="/cart" className="navlink">
-          <button>🛒</button>
+        <Link to="/contact" className="nav-link">
+          Contact
+        </Link>
+        <Link to="https://verifieddoctor.netlify.app/loginPage" className="nav-link">
+          Login
+        </Link>
+        <Link to="/cart" className="cart-link">
+          <button className="cart-btn">🛒</button>
         </Link>
       </nav>
-    </div>
+    </header>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "./ScrollingCardsContainer.css";
-import hero from "../../assets/hero.jpg";
+import hero from "../../assets/doc.jpg";
 import allmedicines from "../../assets/allmedicines.jpg";
 import tablets from "../../assets/tablets.jpg";
 import capsules from "../../assets/capsules.jpg";

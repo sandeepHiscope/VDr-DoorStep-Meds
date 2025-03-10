@@ -9,7 +9,7 @@ export default function Products() {
   const { cartItems, addToCart } = useContext(CartContext);
 
   function handleAddToCart(product) {
-    console.log("Clicked Add to Cart for:", product); // Debug log
+    console.log("Clicked Add to Cart for:", product); // Debug log 
     addToCart(product);
     console.log("Cart after adding:", cartItems); // Debug log
   }

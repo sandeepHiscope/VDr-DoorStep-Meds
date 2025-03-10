@@ -2,34 +2,97 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #51C4D3, #126E82);
-    padding: 15px 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-.logo {
-    font-size: 24px;
+    padding: 1rem 2rem;
+    background:linear-gradient(80deg,#16c57f,#008b53);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
     font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: sans-serif,'Poppins' ;
-}
-.navBar {
-    display: flex;
-    gap: 20px;
-}
-
-.navlink {
+    color: #333;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+  }
+  
+  .nav-bar {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fffefe;
+    font-size: 1rem;
     font-weight: 500;
-    padding: 8px 12px;
-    transition: all 0.3s ease;
-}
-
-/* .navlink:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-} */
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #a440e6;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    /* background: #000; */
+  }
+  
+  .dropbtn {
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 5px;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: .2em;
+    z-index: 10; /* Ensures it appears above other content */
+  }
+  
+  .dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    
+  }
+  
+  .dropdown-content a:hover {
+    background: #0a577376;
+  }
+  
+  
+  .cart-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: white;
+      display: none;
+    }
+    .header {
+      flex-direction: column;
+    }
+  }
+  

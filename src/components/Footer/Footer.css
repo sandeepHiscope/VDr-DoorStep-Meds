@@ -1,5 +1,9 @@
-
-footer{
-    background: linear-gradient(90deg,#0b99ff, #09e2ff);
-
+footer {
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    padding: 1.5rem 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    /* border-top: 3px solid var(--text-color); */
 }

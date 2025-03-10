@@ -1,7 +1,7 @@
 .card {
   width: 13rem;
   height: 18rem;
-  background: #505050a7;
+  background: rgb(160, 160, 160); /* Light background for cards */
   margin: 0.1rem;
   border-radius: 0.5rem;
   display: flex;
@@ -9,92 +9,91 @@
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 0.5rem;
-  
   position: relative; /* Needed for absolute positioning */
-
   transition: box-shadow 0.6s ease-in-out;
-  /* transition: transform 0.2s ease-in-out; */
   overflow: hidden;
-  border: rgba(0, 0, 0, 0.087) solid .00001px;
+  border: 1px solid var(--secondary-color); /* Subtle border */
 }
-.card:hover{
-  box-shadow: 5px 5px 15px 1px rgb(115, 115, 115);
-  /* transform-origin: scale(1.2); */
 
+.card:hover {
+  box-shadow: 5px 5px 15px 1px rgba(18, 110, 130, 0.3); /* Softer shadow effect */
 }
 
 .img {
-  /* object-fit: cover; */
   object-position: center;
   object-fit: cover;
   width: 100%;
-  height:   8em;
+  height: 8em;
   border-radius: 0.5rem 0.5rem 0 0;
   transition: transform 0.5s ease-in-out;
   overflow: hidden;
 }
-.img:hover{
+
+.img:hover {
   transform: scale(1.05);
 }
+
 #title {
-  /* border: 1px solid black; */
   margin: 0rem;
-  color: black;
+  color: var(--text-color); /* Dark text for strong readability */
+  font-weight: bold;
 }
+
 #description {
-  /* border: 1px solid black; */
-  margin: 0rem;
+  margin: 0.5rem;
   font-size: 13px;
-  margin: .5rem;
-  color: black;
+  color: var(--secondary-color); /* Secondary color for text */
 }
+
 #price {
-  /* border: 1px solid black; */
-  margin: 0;
-  margin: .5rem;
-  color: black;
-  
+  margin: 0.5rem;
+  color: var(--text-color);
+  font-weight: bold;
 }
+
 .buttonsContainer {
   display: flex;
   justify-content: space-between;
   width: 10em;
-
   position: absolute;
   bottom: 10px; /* 10px from bottom */
   left: 48%;
   transform: translateX(-50%); /* Center horizontally */
 }
+
 .addToCart {
-  /* position: absolute;
-  top: 16rem; */
   height: 2.2rem;
   width: 5.5rem;
   text-align: center;
   font-size: 10px;
   margin: 0;
-  border-radius: 8px; 
-  transition: width 0.5s ease-in-out, border 0.3s ease-in-out; /* Smooth transition */
+  border-radius: 8px;
+  transition: width 0.5s ease-in-out, border 0.3s ease-in-out;
   border: 0;
-  background: #2d2d2d;
+  background: var(--primary-color); /* Primary button color */
+  color: white;
+  font-weight: bold;
   cursor: pointer;
 }
-.addToCart:hover{
+
+.addToCart:hover {
   width: 7rem;
-  /* transition: ease-in-out .5s; */
-  border: 0;
+  background: var(--secondary-color); /* Darker shade on hover */
 }
-/* .addToCart */
-.addToWishlist{
+
+.addToWishlist {
   padding: 2px;
   height: 2.2rem;
   width: 2.5rem;
   text-align: center;
   font-size: 10px;
-  /* margin-left: 2rem; */
-  /* border-radius: 8px ; */
   border: 0;
-  background: #2d2d2d;
-  border-radius: 8px; 
+  background: var(--text-color); /* Dark contrast button */
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
+.addToWishlist:hover {
+  background: var(--secondary-color); /* Slightly lighter on hover */
 }

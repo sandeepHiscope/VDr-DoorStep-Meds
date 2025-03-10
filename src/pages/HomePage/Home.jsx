@@ -1,72 +1,104 @@
-import Header from "../../components/Header/Header";
-import Card from "../../components/Card/Card";
-import Footer from "../../components/Footer/Footer";
-import ScrollingCardsContainer from "../../components/ScrollingCardsContainer/ScrollingCardsContainer";
-import VerticalScrollingCardsContainer from "../../components/VerticalScrollingCardsContainer/VerticalScrollingCardsContainer";
+import React from "react";
 import "./Home.css";
-import hero from "../../assets/hero.jpg";
-
+import heroImg from "../../assets/herb.jpg";
+import { Link } from "react-router-dom";
+import ScrollingCardsContainer from "../../components/ScrollingCardsContainer/ScrollingCardsContainer";
 export default function Home() {
   return (
-    <div className="homeContent">
-      {/* <hr /> */}
-      <div className="homeheroSection">
-        <img src={hero} alt="homeBanner" />
-        <h1>Your Health, Our Priority </h1>
-        <h2>Trusted Medicines Delivere to Your Doorstep</h2>
-        {/* <p>Shop with confidence knowing that our medicines are sourced from trusted manufacturers and delivered with care.</p> */}
-      </div>
-      <div className="homescrollingContainer">
-        <ScrollingCardsContainer />
-      </div>
-      <hr />
-      <div className="homemidContent">
-        <>
-        <div id="about-us" className="homeabout-us">
-            <h2>Your Trusted Online Pharmacy</h2>
-            <p className="about-description">
-              At <strong>VDr</strong>, we make healthcare
-              simple and accessible. With our
-              <strong> doorstep delivery service</strong>, you no longer need to
-              step out to buy medicines. We provide a wide range of{" "}
-              <strong>
-                genuine medicines, wellness products, and health essentials
-              </strong>
-              , ensuring fast and secure delivery to your home.
-            </p>
+    <div className="HomepageContent">
+      <section className="heroSection">
+        <h1 id="heroTitle">Your Health, Our Priority</h1>
+        <h2 id="subTitle">Trusted Medicines Delivered to Your Doorstep</h2>
+        <div className="searchBox">
+          <input type="text" placeholder="Search for medicines..." />
+        </div>
+        <img src={heroImg} alt="heroImg" id="heroImg" />
+      </section>
 
-            <div className="about-features">
-              <div className="feature-box">
-                <h3>🚚 Fast Delivery</h3>
-                <p>Get your medicines delivered quickly and hassle-free.</p>
-              </div>
-              <div className="feature-box">
-                <h3>🛒 Easy Ordering</h3>
-                <p>
-                  Upload prescriptions, place orders, and receive refill
-                  reminders.
-                </p>
-              </div>
-              <div className="feature-box">
-                <h3>🔒 100% Genuine</h3>
-                <p>
-                  We ensure only verified and high-quality medicines reach you.
-                </p>
-              </div>
-            </div>
+      <section className="categoriesSection">
+        <h2>Popular Categories</h2>
+        <div className="categoryGrid">
+          <Link to="/products"className="categoryItem">Doctor's Prescribed</Link>
+          <Link to="/health-products" className="categoryItem">
+            Cold, Fever & Pain Relief
+          </Link>
+          <Link to="/supplements" className="categoryItem">
+            Diabetes & Hypertension
+          </Link>
+          <Link to="/supplements" className="categoryItem">
+            Vitamins & Supplements
+          </Link>
+          <Link to="/supplements" className="categoryItem">
+            Medical Devices
+          </Link>
+          <Link to="/category/pain-relievers" className="categoryItem">
+            Pain Relievers
+          </Link>
+          <Link to="/category/cold-flu" className="categoryItem">
+            Anti oxydents
+          </Link>
+          <Link to="/category/vitamins" className="categoryItem">
+            Vitamins
+          </Link>
+          <Link to="/category/prescriptions" className="categoryItem">
+            Prescriptions
+          </Link>
+          <Link to="/category/diabetes-care" className="categoryItem">
+            Diabetes Care
+          </Link>
+          <Link to="/category/heart-health" className="categoryItem">
+            Heart Health
+          </Link>
+          <Link to="/category/skin-care" className="categoryItem">
+            Skin Care
+          </Link>
+        </div>
+      </section>
 
-            <p className="about-tagline">
-              Your health is our priority! Shop now for a{" "}
-              <strong>safe, affordable, and convenient</strong> pharmacy
-              experience.
-            </p>
-            <a href="[Your Store Link]" className="shop-now-btn">
-              Shop Now
-            </a>
+      <section className="productsSection">
+        <h2>Featured Products</h2>
+        <div className="productGrid">
+          <ScrollingCardsContainer />
+        </div>
+      </section>
+
+      <section className="servicesSection">
+        <h2>Our Services</h2>
+        <div className="serviceGrid">
+          <Link to="/services/customer-support" className="serviceItem">
+            24/7 Customer Support
+          </Link>
+          <Link to="/services/delivery" className="serviceItem">
+            Fast & Secure Delivery
+          </Link>
+          <Link to="/services/pharmacy" className="serviceItem">
+            Certified Pharmacy
+          </Link>
+          <Link to="/services/consultation" className="serviceItem">
+            Online Consultation
+          </Link>
+        </div>
+      </section>
+
+      <section className="testimonialsSection">
+        <h2>What Our Customers Say</h2>
+        <div className="testimonialGrid">
+          <div className="testimonialItem">
+            "Great service and fast delivery!" - John D.
           </div>
-          <VerticalScrollingCardsContainer />
-        </>
-      </div>
+          <div className="testimonialItem">
+            "The best pharmacy experience online." - Sarah M.
+          </div>
+          <div className="testimonialItem">
+            "Reliable and affordable medicines." - Emily R.
+          </div>
+        </div>
+      </section>
+
+      <section className="contactSection">
+        <h2>Contact Us</h2>
+        <p>Email: support@sotamedicines.com | Phone: +123 456 7890</p>
+      </section>
     </div>
   );
 }
