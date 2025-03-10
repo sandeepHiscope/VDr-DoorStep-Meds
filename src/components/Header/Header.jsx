@@ -8,15 +8,15 @@ export default function Header() {
   return (
     <header className="header">
       <div className="logo-container">
-        <Link to="/" className="logo">
+        <Link to="https://verifieddoctor.netlify.app" className="logo">
           V-Commerce
         </Link>
       </div>
 
       <nav className="nav-bar">
-        <Link to="https://verifieddoctor.netlify.app/" className="nav-link">
+        {/* <Link to="https://verifieddoctor.netlify.app/" className="nav-link">
           VDr
-        </Link>
+        </Link> */}
 
         {/* Dropdown */}
         <div className="dropdown">
