@@ -1,172 +1,42 @@
+import { useState, createContext } from "react"; // Import necessary hooks
 import "./Products.css";
 import Card from "../../components/Card/Card";
 import ProductFilters from "../../components/ProductFilters/ProductFilters";
-import img from "../../assets/allmedicines.jpg";
+import ProductList from "../../assets/ProductList";
 
-const products = [
-  {
-    id: 1,
-    name: "Paracetamol",
-    image: img,
-    description: "Pain reliever and fever reducer",
-    price: "50",
-  },
-  {
-    id: 2,
-    name: "Ibuprofen",
-    image: img,
-    description: "Non-steroidal anti-inflammatory drug (NSAID)",
-    price: "75",
-  },
-  {
-    id: 3,
-    name: "Amoxicillin",
-    image: img,
-    description: "Broad-spectrum antibiotic",
-    price: "120",
-  },
-  {
-    id: 4,
-    name: "Cetirizine",
-    image: img,
-    description: "Antihistamine for allergies",
-    price: "40",
-  },
-  {
-    id: 5,
-    name: "Metformin",
-    image: img,
-    description: "Used to control blood sugar levels in diabetes",
-    price: "90",
-  },
-  {
-    id: 6,
-    name: "Omeprazole",
-    image: img,
-    description: "Used to treat acid reflux and ulcers",
-    price: "110",
-  },
-  {
-    id: 7,
-    name: "Aspirin",
-    image: img,
-    description: "Pain reliever and anti-inflammatory",
-    price: "30",
-  },
-  {
-    id: 8,
-    name: "Losartan",
-    image: img,
-    description: "Used to treat high blood pressure",
-    price: "140",
-  },
-  {
-    id: 9,
-    name: "Atorvastatin",
-    image: img,
-    description: "Lowers cholesterol and triglycerides",
-    price: "160",
-  },
-  {
-    id: 10,
-    name: "Azithromycin",
-    image: img,
-    description: "Antibiotic for bacterial infections",
-    price: "180",
-  },
-  {
-    id: 11,
-    name: "Atorvastatin",
-    image: img,
-    description: "Lowers cholesterol and triglycerides",
-    price: "160",
-  },
-  {
-    id: 12,
-    name: "Azithromycin",
-    image: img,
-    description: "Antibiotic for bacterial infections",
-    price: "180",
-  },
-  {
-    id: 13,
-    name: "Atorvastatin",
-    image: img,
-    description: "Lowers cholesterol and triglycerides",
-    price: "160",
-  },
-  {
-    id: 14,
-    name: "Azithromycin",
-    image: img,
-    description: "Antibiotic for bacterial infections",
-    price: "180",
-  },
-  {
-    id: 15,
-    name: "Atorvastatin",
-    image: img,
-    description: "Lowers cholesterol and triglycerides",
-    price: "160",
-  },
-  {
-    id: 16,
-    name: "Azithromycin",
-    image: img,
-    description: "Antibiotic for bacterial infections",
-    price: "180",
-  },
-  {
-    id: 17,
-    name: "Atorvastatin",
-    image: img,
-    description: "Lowers cholesterol and triglycerides",
-    price: "160",
-  },
-  {
-    id: 18,
-    name: "Azithromycin",
-    image: img,
-    description: "Antibiotic for bacterial infections",
-    price: "180",
-  },
-  {
-    id: 19,
-    name: "Atorvastatin",
-    image: img,
-    description: "Lowers cholesterol and triglycerides",
-    price: "160",
-  },
-  {
-    id: 20,
-    name: "Azithromycin",
-    image: img,
-    description: "Antibiotic for bacterial infections",
-    price: "180",
-  },
-];
+// 1️⃣ Create a context to store cart data globally
+export const CartContext = createContext(); 
 
 export default function Products() {
+  // 2️⃣ Create a state to hold cart items
+  const [cartItem, setcartItem] = useState([]); 
+
+  // 3️⃣ Function to add an item to the cart
+  function addToCart(product) {
+    setcartItem([...cartItem, product]); // Update the state with new product
+    console.log("Added to cart:", product);
+  }
+
   return (
-    <>
-      <main>
+    // 4️⃣ Wrap the components with CartContext.Provider to share cart data
+    <CartContext.Provider value={{ cartItem, addToCart }}> 
         <div className="productsPageProductsPage">
           <div className="productsPageProductsFilter">
-          <ProductFilters/>
+            <ProductFilters /> {/* Filters for products */}
           </div>
           <div className="productsPageProductsContainer">
-            {products.map((product) => (
+            {ProductList.map((product) => (
               <Card
                 key={product.id}
                 name={product.name}
                 image={product.image}
                 description={product.description}
                 price={product.price}
+                addToCart={() => addToCart(product)} // Pass function to add items
               />
             ))}
           </div>
         </div>
-      </main>
-    </>
+    </CartContext.Provider>
   );
 }

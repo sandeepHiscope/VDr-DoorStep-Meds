@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 // import img from "../../assets/x.png"
 
-export default function Card({ image, name, description, price }) {
+export default function Card({ image, name, description, price ,addToCart}) {
     
   return (
     <div className="card">
@@ -12,7 +12,7 @@ export default function Card({ image, name, description, price }) {
       <p className="price"> ${price}</p>
 
       <div className="buttonsContainer">
-        <button className="addToCart">Ad to Cart</button>
+        <button className="addToCart" onClick={addToCart}>Ad to Cart</button>
         <button className="addToWishlist">🤍</button>
         {/* 🤍❤️ */}
       </div>
