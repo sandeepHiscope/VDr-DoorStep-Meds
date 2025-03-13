@@ -53,7 +53,7 @@ body {
   position: absolute;
   left: -.01em;
   z-index: -1;
-  /* filter: blur(2px); */
+  filter: blur(3px);
 }
 .searchBox input {
   width: 60%;

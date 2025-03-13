@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import heroImg from "../../assets/herb.jpg";
+import heroImg from "../../assets/capsules.jpg";
 import { Link } from "react-router-dom";
 import ScrollingCardsContainer from "../../components/ScrollingCardsContainer/ScrollingCardsContainer";
 export default function Home() {
