@@ -4,19 +4,16 @@ export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
+  const [wishlistItems, setWishlistItems] = useState([]);
 
   function addToCart(item) {
-    console.log("Clicked Add to Cart for:", item);
-
     setCartItems((prevCart) => {
       const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
-      if (existingItem) {
-        return prevCart.map((cartItem) =>
-          cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
-        );
-      } else {
-        return [...prevCart, { ...item, quantity: 1 }];
-      }
+      return existingItem
+        ? prevCart.map((cartItem) =>
+            cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+          )
+        : [...prevCart, { ...item, quantity: 1 }];
     });
   }
 
@@ -28,8 +25,25 @@ export function CartProvider({ children }) {
     );
   }
 
+  const toggleWishlist = (product) => {
+    setWishlistItems((prevWishlist) => {
+      const isAlreadyWishlisted = prevWishlist.some((item) => item.id === product.id);
+      if (isAlreadyWishlisted) {
+        return prevWishlist.filter((item) => item.id !== product.id);
+        
+      } else {
+        return [...prevWishlist, product];
+      }
+    });
+  };
+
+  function moveToCartFromWishlist(item) {
+    addToCart(item);
+    setWishlist((prevWishlist) => prevWishlist.filter((wishItem) => wishItem.id !== item.id));
+  }
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, setCartItems }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, wishlistItems, toggleWishlist , moveToCartFromWishlist }}>
       {children}
     </CartContext.Provider>
   );

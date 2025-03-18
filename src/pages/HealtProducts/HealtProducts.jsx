@@ -26,6 +26,7 @@ export default function HealtProducts() {
               key={product.id}
               name={product.name}
               image={product.image}
+              product={product}
               description={product.description}
               price={product.price}
               addToCart={() => handleAddToCart(product)}
