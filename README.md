@@ -1,10 +1,12 @@
+#VDr -Verified. Qualified. Trusted
+
 # VDr Application - User Guide
 
 ## Welcome to VDr!
 
 VDr stands out as a revolutionary healthcare app, designed to bridge the gap between patients and verified doctors. Unlike traditional healthcare solutions, VDr ensures reliability, convenience, and affordability, making your healthcare journey seamless and stress-free. Here’s a simple guide to help you get started.
 
-## What Can You Do with VDr?
+## How VDr can help you?
 
 ### 1. Verify Doctor Credentials
 - **Why It Matters**: Ensure you’re seeing a qualified doctor.
