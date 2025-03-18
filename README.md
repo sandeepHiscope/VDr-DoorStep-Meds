@@ -1,6 +1,6 @@
 #VDr -Verified. Qualified. Trusted
 
-# VDr Application - User Guide
+## VDr Application - User Guide
 
 ## Welcome to VDr!
 
