@@ -4,6 +4,7 @@ import heroImg from "../../assets/capsules.jpg";
 import { Link } from "react-router-dom";
 import ScrollingCardsContainer from "../../components/ScrollingCardsContainer/ScrollingCardsContainer";
 export default function Home() {
+
   return (
     <div className="HomepageContent">
       <section className="heroSection">
