@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-
+import vdr from "../../assets/vdr.png";
 export default function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <header className="header">
       <div className="logo-container">
-        <Link to="https://verifieddoctor.netlify.app" className="logo">
-          V-Commerce
+        <Link to="https://verifieddoctor.netlify.app" >
+          <img src={vdr} alt="logo" />
         </Link>
       </div>
 
