@@ -25,8 +25,6 @@ export default function Header() {
           <button
             className="dropbtn"
             onClick={() => setDropdownOpen(!isDropdownOpen)}
-{/*             onMouseOver={() => setDropdownOpen(!isDropdownOpen)} */}
-{/*             onMouseLeave={() => setDropdownOpen(isDropdownOpen)} */}
             >
             Products ▾
           </button>
