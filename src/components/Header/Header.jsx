@@ -48,9 +48,9 @@ export default function Header() {
         <Link to="/contact" className="nav-link">
           Contact
         </Link>
-        <Link to="https://verifieddoctor.netlify.app/loginPage" className="nav-link">
+{/*         <Link to="https://verifieddoctor.netlify.app/loginPage" className="nav-link">
           Login
-        </Link>
+        </Link> */}
         <Link to="/cart" className="cart-link">
           <button className="cart-btn">🛒</button>
         </Link>
