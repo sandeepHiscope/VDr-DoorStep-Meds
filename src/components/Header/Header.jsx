@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="logo-container">
-        <Link to="https://verifieddoctor.netlify.app" >
+        <Link to="https://vdr-pre-production.netlify.app/" >
           <img src={vdr} alt="logo" />
         </Link>
       </div>
@@ -17,14 +17,16 @@ export default function Header() {
         {/* <Link to="https://verifieddoctor.netlify.app/" className="nav-link">
           VDr
         </Link> */}
-
+<Link to="/" className="nav-link">
+          HomeMeds
+        </Link>
         {/* Dropdown */}
         <div className="dropdown">
           <button
             className="dropbtn"
             onClick={() => setDropdownOpen(!isDropdownOpen)}
-            onMouseOver={() => setDropdownOpen(!isDropdownOpen)}
-            onMouseLeave={() => setDropdownOpen(isDropdownOpen)}
+{/*             onMouseOver={() => setDropdownOpen(!isDropdownOpen)} */}
+{/*             onMouseLeave={() => setDropdownOpen(isDropdownOpen)} */}
             >
             Products ▾
           </button>
